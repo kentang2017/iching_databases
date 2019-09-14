@@ -41,5 +41,5 @@ def get_jiaoshi_yilin_gua(url):
         except ValueError:
             pass
         sub_gua_details_list.append(sub_gua_details)
-    structure = {gua_list[0][:gua_list[0].index("之")] : dict(zip(sub_gua_list, sub_gua_details_list))}
+    structure = {"卦":gua_list[0][:gua_list[0].index("之")], "之卦" : dict(zip(sub_gua_list, sub_gua_details_list))}
     return structure
